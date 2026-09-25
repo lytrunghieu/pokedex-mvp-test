@@ -35,6 +35,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
     }}>
       <button 
         onClick={toggleFavorite}
+        aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
         style={{
           position: 'absolute',
           top: '0.5rem',
@@ -57,7 +58,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
       <h3 style={{ textTransform: 'capitalize', marginTop: '0.5rem', marginBottom: '0' }}>
         {pokemon.name}
       </h3>
-      <span style={{ color: '#888', fontSize: '0.9rem' }}>#{pokemon.id}</span>
+      <span style={{ color: '#bbb', fontSize: '0.9rem' }}>#{pokemon.id}</span>
     </div>
   );
 }
